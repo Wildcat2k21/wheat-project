@@ -1,0 +1,31 @@
+:root {
+    --second-color: #747474;
+    --doc-frame-h: max(60vh, 600px);
+}
+
+#doc-iframe{
+    margin-top: 25px;
+    height: var(--doc-frame-h)
+}
+
+.content{
+    transition: 0.25s opacity ease-in-out;
+    opacity: 0;
+}
+
+.content > span {
+    line-height: 2em;
+    font-size: 14pt;
+}
+
+#report-publisher{
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--second-color)
+}
+
+#report-sphere{
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--second-color);
+}

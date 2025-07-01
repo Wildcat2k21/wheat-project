@@ -1,0 +1,33 @@
+:root {
+    --border-color: #b9b9b9;
+    --text-color: #636363;
+    --main-color: #ffffff;
+}
+
+footer {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.footer-container {
+    border-top: solid 1px var(--border-color);
+    padding: 35px 0px 14px 0px;
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo > img {
+    width: 200px;
+}
+
+.info{
+    text-align: center;
+    font-size: 10pt;
+}

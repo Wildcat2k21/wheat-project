@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Отчеты по болезням кукурузы</title>
+        <link rel="favicon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/src/styles/modal-window.css">
+        <link rel="stylesheet" href="/src/styles/header.css">
+        <link rel="stylesheet" href="/src/styles/footer.css">
+        <link rel="stylesheet" href="/src/styles/main.css">
+        <link rel="stylesheet" href="/src/styles/index.css">
+        <link rel="stylesheet" href="/src/styles/pages/reports.css">
+        <script src="/src/scripts/storage.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="nav-container">
+                <div class="main-nav nav">
+                    <a class="about-tab" href="/">Главная</a>
+                    <a class="active-tab report-tab">Публикации</a>
+                    <a class="employees-tab" href="/pages/employees.html">Профилактика</a>
+                </div>
+                <!-- Отображение опции авторизации / выхода обрабатывается в index.js -->
+            </div>
+            <div class="firm-image"></div>
+        </header>
+        <main>
+            <div class="content">
+                
+                <!-- форма для создания нового отчета -->
+                <form autocomplete="off" action="/api/report" enctype="multipart/form-data" method="POST" class="new-report">
+                    <h2>Добавить публикацию о пшенице</h2>
+                    <p>Укажите название исследования, сферу анализа, краткое описание и прикрепите PDF-файл. Просмотреть уже опубликованные исследования можно ниже.</p>
+                    <input name="title" id="report-title" maxlength="45" type="text" placeholder="Название исследования"/>
+                    <input name="sphere" id="report-sphere" maxlength="45" type="text" placeholder="Сфера заболевания"/>
+                    <textarea name="description" id="report-description" maxlength="250" placeholder="Краткое описание симптомов и анализа"></textarea>
+                    <div class="pdf-btn-container">
+                        <input type="button" class="btn" id="submit-btn" value="Файл не выбран"/>
+                        <input type="file" id="pdf-file" name="pdf-file" accept="application/pdf" value="Прикрепить файл"/>
+                    </div>
+                </form>
+                
+                <h2>Исследования других агрономов</h2>
+                <p>Кликните по отчету, чтобы изучить материалы по диагностике и лечению болезней кукурузы</p>
+                <div class="report-content">
+                    <div id="report-list">
+                        <!-- сюда будут вставляться отчеты -->
+                    </div>
+                    <div class="report-nav">
+                        <input id='reports-backward-nav-btn' type="button" class="btn" value="⬅ предыдущая страница">
+                        <input id='reports-forward-nav-btn' type="button" class="btn" value="следующая страница ⮕">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+           <div class="footer-container">
+            <span class="info">Справочник разработан для агрономов, фермеров и специалистов сельского хозяйства. По вопросам сотрудничества: cornhealth@example.com</span>
+            <div class="logo">
+                <img alt="логотип фирмы" src="/src/img/favicon.png" alt="">
+            </div>
+           </div>
+        </footer>
+        <script src="/src/scripts/modal_window/index.js"></script>
+        <script src="/src/scripts/topnav.js"></script>
+        <script src="/src/scripts/index.js"></script>
+        <script src="/src/scripts/reports/index.js"></script>
+        <script src="/src/scripts/reports/handleInputs.js"></script>
+        <script src="/src/scripts/reports/handlerPdfFile.js"></script>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+:root {
+    --input-background: #f5f5f5;
+    --button-background: #93d2ff;
+    --second-color: #747474;
+    --page-background: #ffffff;
+    --default-text-color: #282828;
+}
+
+body{
+    margin: 0;
+    background-color: var(--page-background);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--default-text-color);
+    min-width: 950px;
+}
+
+a {
+    font-size: 14pt;
+    color: var(--default-text-color);
+}
+
+h1 {
+    margin-bottom: 0px;
+    font-size: 30pt;
+}
+
+h2 {
+    margin-bottom: 0px;
+    font-size: 20pt;
+}
+
+p {
+    font-size: 12pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.75em;
+}
+
+span {
+    line-height: 1.75em;
+}
+
+input[type=text], input[type=password], textarea {
+    outline: none;
+    height: 25px;
+    border: none;
+    background-color: var(--input-background);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 50px;
+    max-height: 100px;
+}
+
+.btn{
+    padding: 0px 20px 0px 20px;
+    height: 35px;
+    border: none;
+    background-color: var(--button-background);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: 1;
+}
+
+.disabled-btn{
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+
+.wallpaper {
+    margin: 3vh 0px 3vh 0px;
+    align-self: center;
+    width: clamp(500px, 50vw, 700px);
+}

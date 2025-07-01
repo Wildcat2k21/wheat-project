@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Болезни кукурузы — отчет</title>
+        <link rel="favicon" type="image/x-icon" href="/favicon.ico">
+        <link rel="stylesheet" href="/src/styles/modal-window.css">
+        <link rel="stylesheet" href="/src/styles/header.css">
+        <link rel="stylesheet" href="/src/styles/footer.css">
+        <link rel="stylesheet" href="/src/styles/main.css">
+        <link rel="stylesheet" href="/src/styles/index.css">
+        <link rel="stylesheet" href="/src/styles/pages/report.css">
+        <script src="/src/scripts/storage.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="nav-container">
+                <div class="main-nav nav">
+                    <a class="about-tab" href="/">Главная</a>
+                    <a class="report-tab" href="/pages/reports.html?_page=1&_limit=5">Публикации</a>
+                    <a class="employees-tab" href="/pages/employees.html">Профилактика</a>
+                </div>
+                <!-- Отображение опции авторизации / выхода обрабатывается в index.js -->
+            </div>
+            <div class="firm-image"></div>
+        </header>
+        <main>
+            <div class="content">
+                <!-- название отчета -->
+                <h1 id="report-title">Анализ заболеваний кукурузы за 2024 год</h1>
+                <!-- название компании -->
+                <span id="report-publisher">Научно-исследовательский центр агропромышленной безопасности</span>
+                <!-- описание отчета -->
+                <span id="report-description">
+                    Отчет содержит систематизированные данные по выявленным заболеваниям кукурузы на территории России. В документе описаны симптомы, зоны риска, методы диагностики и профилактики наиболее распространённых инфекций.
+                </span>
+                <!-- сфера отчета -->
+                <span id="report-sphere">Сельское хозяйство / Болезни растений</span>
+                <!-- документ отчета -->
+                <iframe id="doc-iframe" src="/src/docexmaple/example.pdf" frameborder="0"></iframe>
+            </div>
+        </main>
+        <footer>
+           <div class="footer-container">
+            <span class="info">Справочник разработан для агрономов, фермеров и специалистов сельского хозяйства. По вопросам сотрудничества: cornhealth@example.com</span>
+            <div class="logo">
+                <img alt="логотип фирмы" src="/src/img/favicon.png" alt="">
+            </div>
+           </div>
+        </footer>
+        <script src="/src/scripts/modal_window/index.js"></script>
+        <script src="/src/scripts/topnav.js"></script>
+        <script src="/src/scripts/index.js"></script>
+        <script src="/src/scripts/report/index.js"></script>
+    </body>
+</html>

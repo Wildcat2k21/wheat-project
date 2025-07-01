@@ -1,0 +1,12 @@
+main {
+    min-height: calc(100vh - 600px);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: clamp(500px, 50vw, 900px);
+}
